@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Rumor-spread : " />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Rumor-spread</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/EPFL-AgentBased-2014/rumor-spread">View on GitHub</a>
+
+          <h1 id="project_title">Rumor-spread</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/EPFL-AgentBased-2014/rumor-spread/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/EPFL-AgentBased-2014/rumor-spread/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="r%C3%A9sum%C3%A9" class="anchor" href="#r%C3%A9sum%C3%A9"><span class="octicon octicon-link"></span></a>Résumé</h3>
+
+<p>Notre modèle simule la propagation d'une rumeur au sein d'une population d'individus. Il permet d'estimer le temps nécessaire pour que la rumeur soit totalement propagée, ou au contraire qu'elle ait disparue en fonction de différents paramètres.</p>
+
+<h3>
+<a name="introduction--int%C3%A9r%C3%AAt-de-la-recherche" class="anchor" href="#introduction--int%C3%A9r%C3%AAt-de-la-recherche"><span class="octicon octicon-link"></span></a>Introduction / intérêt de la recherche</h3>
+
+<p>Les plus récents moyens de communication dans notre société ont fait basculer notre façon de recevoir une information. L'intérêt de la recherche est d'analyser l'impact de ces nouveaux moyens sur le mode et la vitesse de transmission de l'information dans une société.</p>
+
+<p>C'est pourquoi notre modèle fonctionne avec deux types de transmission: la transmission directe, d'un individu à l'autre lors d'une rencontre physique, et la transmission par réseau, permettant une transmission d'information même lorsque deux individus ne se trouvent pas dans un même lieu.</p>
+
+<h3>
+<a name="objectifs-et-hypoth%C3%A8ses" class="anchor" href="#objectifs-et-hypoth%C3%A8ses"><span class="octicon octicon-link"></span></a>Objectifs et hypothèses$</h3>
+
+<p>Modéliser la transmission d’une rumeur dans une population permet de démontrer l’impact direct du mode de transmission, mais aussi de comprendre la manière dont une rumeur peut se propager de manière exponentielle.
+Nous avons donc émis l’hypothèse que grâce à un réseau social développé, une rumeur peut se propager très rapidement, même si chaque individu ne transmet son information que de manière modérée, c’est-à-dire à quelques personnes.
+Nous avons aussi imaginé que dans une situation où les réseaux sont peu développés voire inexistants, la rumeur se propagerait donc par bouche-à-oreille et se répandrait donc beaucoup plus difficilement. Pour valoriser ce type de transmission, mais aussi pour modéliser une répartition territoriale plus réaliste, le modèle comprend des « lieux de rencontre » autour desquels nos agents peuvent se rassembler, et donc favoriser une meilleure transmission de l’information.</p>
+
+<h3>
+<a name="m%C3%A9thodes-et-proc%C3%A9dures" class="anchor" href="#m%C3%A9thodes-et-proc%C3%A9dures"><span class="octicon octicon-link"></span></a>Méthodes et procédures</h3>
+
+<p>En faisant varier trois principaux paramètres (la densité de personnes, de lieux de rencontres et de connections en moyenne de chaque individu au réseau), nous avons voulu vérifier nos hypothèses. Ils correspondent à number-of-persons, meeting-points-density et average-network-connections sur le modèle.</p>
+
+<p>Le modèle comprend aussi d’autres paramètres: le paramètre initial-persons-knowing-rumor correspond au nombre de personnes connaissant la rumeur au début de la simulation. Les paramètres spread-by-word-of-mouth et spread-by-network correspondent respectivement à la diffusion de la rumeur par rencontre directe entre deux individus et par les réseaux sociaux. Lors de la rencontre directe, la diffusion de la rumeur dépend de l'affinité que les personnes ont entre elles, c’est-à-dire quel est le pourcentage de chances que la rumeur se transmette. Dans le cas où deux personnes sont liées par un lien de réseau, spread-by-network correspond au pourcentage de chances que la rumeur soit transmise à chaque étape de la simulation.
+Pour notre étude nous ne ferons pas varier ces paramètres. La rumeur se répandra donc plus ou moins selon les trois paramètres principaux.</p>
+
+<p>Le modèle fonctionne avec la logique de renouvellement constant de la population: les personnes entrent et sortent librement de l'échantillon selon leur trajectoire, générée aléatoirement. Donc, certaines personnes sachant la rumeur peuvent sortir de l’échantillon étudié, et les personnes qui entrent ne connaissent pas encore la rumeur. Ce phénomène allant à l’encontre de la propagation de la rumeur, il permet d’obtenir certaines situations où la rumeur disparaît, ou certaines situations d’équilibre dans laquelle la rumeur ne parvient pas à atteindre 100% de la population.</p>
+
+<h3>
+<a name="r%C3%A9sultats" class="anchor" href="#r%C3%A9sultats"><span class="octicon octicon-link"></span></a>Résultats</h3>
+
+<p>Tout d’abord, comme formulé dans nos hypothèses, l’impact des réseaux sociaux a été énorme. Plus le nombre moyen de connexions aux réseaux par personne est élevé, plus le temps nécessaire à ce que la rumeur soit totalement propagée va chuter. Nous avons aussi observé en générant des simulations à plusieurs reprises et en variant les trois paramètres principaux que lorsque le nombre de connexions moyen est compris entre 0 et 1, il n’est apparu aucune situation ou la rumeur s’était totalement répandue. Il s’agit donc de conditions où s’installe soit une situation d’équilibre, soit une situation où la rumeur a disparu.</p>
+
+<p>Notre principale surprise a été que les lieux de rencontre n’ont pas d’effet direct sur la vitesse de propagation globale de la rumeur. Bien qu’ils favorisent la transmission au sein d’un rassemblement qu’ils auront généré, ils ont tendance - à concentration élevée - à figer le déplacement des personnes dans une échelle globale.</p>
+
+<p>En observant la proportion du bouche-à oreille en fonction de l’ensemble des transmissions, nous avons aussi observé une influence des réseaux sociaux; plus le réseau est dense, moins la transmission par bouche-à-oreille sera importante par rapport à la transmission par réseau. En d’autres termes, cela veut dire que si les réseaux sociaux sont très développés, la rencontre physique autour des points de rencontre ne sera plus nécessaire pour transmettre une information rapidement.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rumor-spread maintained by <a href="https://github.com/EPFL-AgentBased-2014">EPFL-AgentBased-2014</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
