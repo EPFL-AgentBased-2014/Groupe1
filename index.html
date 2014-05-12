@@ -31,7 +31,8 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p><img src="https://ewa.epfl.ch/owa/attachment.ashx?attach=1&amp;id=RgAAAAAKS%2bc3UpNuS5Yf%2bVz3xoeXBwBIa7vTXnQ9T5zCJEHf2ZDFAAAA4ZBoAABIa7vTXnQ9T5zCJEHf2ZDFAAAaAPKuAAAJ&amp;attid0=BAADAAAA&amp;attcnt=1" alt="">### Résumé</p>
+        <h3>
+<a name="r%C3%A9sum%C3%A9" class="anchor" href="#r%C3%A9sum%C3%A9"><span class="octicon octicon-link"></span></a>Résumé</h3>
 
 <p>Notre modèle simule la propagation d'une rumeur au sein d'une population d'individus. Il permet d'estimer le temps nécessaire pour que la rumeur soit totalement propagée, ou au contraire qu'elle ait disparu en fonction de différents paramètres.</p>
 
@@ -52,9 +53,11 @@
 
 <p>Le modèle comprend aussi d’autres paramètres: Le paramètre initial-persons-knowing-rumor correspond au nombre de personnes connaissant la rumeur au début de la simulation. Les paramètres spread-by-word-of-mouth et spread-by-network correspondant respectivement à la diffusion de la rumeur par rencontre directe entre deux individus et par les réseaux sociaux. Lors de la rencontre directe, la diffusion de la rumeur dépend de l'affinité que les personnes ont entre elles, c’est-à-dire quel est le pourcentage de chances que la rumeur se transmette. Dans le cas où deux personnes sont liées par un lien de réseau, spread-by-network correspond au pourcentage de chances que la rumeur soit transmise à chaque étape de la simulation. Pour notre étude nous ne ferons pas varier ces paramètres. La rumeur se répandra donc plus ou moins selon les trois paramètres principaux.</p>
 
-<p><img src="https://ewa.epfl.ch/owa/attachment.ashx?attach=1&amp;id=RgAAAAAKS%2bc3UpNuS5Yf%2bVz3xoeXBwBIa7vTXnQ9T5zCJEHf2ZDFAAAA4ZBoAABIa7vTXnQ9T5zCJEHf2ZDFAAAaAPKuAAAJ&amp;attid0=BAABAAAA&amp;attcnt=1" alt=""></p>
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/75daf7140f9b831070587febfda5d546a89ad14f/images/thumbnail1.JPG" alt="Un exemple d'image">
+transmission par bouche à oreille</p>
 
-<p><img src="https://ewa.epfl.ch/owa/attachment.ashx?attach=1&amp;id=RgAAAAAKS%2bc3UpNuS5Yf%2bVz3xoeXBwBIa7vTXnQ9T5zCJEHf2ZDFAAAA4ZBoAABIa7vTXnQ9T5zCJEHf2ZDFAAAaAPKuAAAJ&amp;attid0=BAACAAAA&amp;attcnt=1" alt=""></p>
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/75daf7140f9b831070587febfda5d546a89ad14f/images/thumnail2.JPG" alt="Un exemple d'image">
+transmission par réseau et bouche à oreille</p>
 
 <p>Le modèle fonctionne avec la logique de renouvellement constant de la population: Les personnes entrent et sortent librement de l'échantillon selon leur trajectoire, générée aléatoirement. Donc, certaines personnes sachant la rumeur peuvent sortir de l’échantillon étudié, et les personnes qui entrent dans cet échantillon ne connaissent pas encore la rumeur. Ce phénomène allant à l’encontre de la propagation de la rumeur, il permet d’obtenir certaines situations où la rumeur disparaît, ou certaines situations d’équilibre dans laquelle la rumeur ne parvient pas à atteindre 100% de la population.</p>
 
@@ -63,9 +66,17 @@
 
 <p>Tout d’abord, comme formulé dans nos hypothèses, l’impact des réseaux sociaux a été énorme. Plus le nombre moyen de connexions aux réseaux par personne est élevé, plus le temps nécessaire à ce que la rumeur soit totalement propagée va chuter. Nous avons aussi observé en générant des simulations à plusieurs reprises et en variant les trois paramètres principaux que lorsque le nombre de connexions moyen est compris entre 0 et 1 il n’est apparu aucune situation ou la rumeur s’était totalement répandue. Il s’agit donc de conditions ou s’installe soit une situation d’équilibre, soit une situation où la rumeur a disparu. En revanche, lorsque le nombre de connections moyenne atteint 2 ou 3 connections la rumeur se répand rapidement. On peut remarque que davantage de connections ne favorisait pas forcément beaucoup plus la diffusion de la rumeur, c'est à dire que les premières connections sont les plus décisives.</p>
 
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/c2f84c161235aedd502d68aed0e68f69a7a50b17/Graphe3.jpg" alt="Un exemple d'image"></p>
+
 <p>Notre principale surprise a été que les lieux de rencontre n’ont pas d’effet direct sur la vitesse de propagation globale de la rumeur. Bien qu’ils favorisent la transmission au sein d’un rassemblement qu’ils auront généré, ils ont tendance - à concentration élevée - à figer le déplacement des personnes dans une échelle globale.</p>
 
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/c2f84c161235aedd502d68aed0e68f69a7a50b17/Graphe1.jpg" alt="Un exemple d'image"></p>
+
 <p>En observant la proportion du bouche-à oreille en fonction de l’ensemble des transmissions, nous avons aussi observé une influence des réseaux sociaux; plus le réseau est dense, moins la transmission par bouche-à-oreille sera importante par rapport à la transmission par réseau. En d’autres termes, cela veut dire que si les réseaux sociaux sont très développés, la rencontre physique autour des points de rencontre ne sera plus nécessaire pour transmettre une information rapidement.</p>
+
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/c2f84c161235aedd502d68aed0e68f69a7a50b17/Graphe4.jpg" alt="Un exemple d'image"></p>
+
+<p><img src="https://github.com/EPFL-AgentBased-2014/rumor-spread/blob/c2f84c161235aedd502d68aed0e68f69a7a50b17/Graphe2.jpg" alt="Un exemple d'image"></p>
 
 <h3>
 <a name="am%C3%A9liorations" class="anchor" href="#am%C3%A9liorations"><span class="octicon octicon-link"></span></a>Améliorations</h3>
