@@ -58,6 +58,9 @@ Nous avons aussi imaginé que dans une situation où les réseaux sont peu déve
 <p>Le modèle comprend aussi d’autres paramètres: le paramètre initial-persons-knowing-rumor correspond au nombre de personnes connaissant la rumeur au début de la simulation. Les paramètres spread-by-word-of-mouth et spread-by-network correspondent respectivement à la diffusion de la rumeur par rencontre directe entre deux individus et par les réseaux sociaux. Lors de la rencontre directe, la diffusion de la rumeur dépend de l'affinité que les personnes ont entre elles, c’est-à-dire quel est le pourcentage de chances que la rumeur se transmette. Dans le cas où deux personnes sont liées par un lien de réseau, spread-by-network correspond au pourcentage de chances que la rumeur soit transmise à chaque étape de la simulation.
 Pour notre étude nous ne ferons pas varier ces paramètres. La rumeur se répandra donc plus ou moins selon les trois paramètres principaux.</p>
 
+<p>[Un exemple d'image]()
+<img src="https://raw.githubusercontent.com/EPFL-AgentBased-2014/Cours/master/Images/Wheeler-FoxHuntingRabbits.jpg" alt="Un exemple d'image"></p>
+
 <p>Le modèle fonctionne avec la logique de renouvellement constant de la population: les personnes entrent et sortent librement de l'échantillon selon leur trajectoire, générée aléatoirement. Donc, certaines personnes sachant la rumeur peuvent sortir de l’échantillon étudié, et les personnes qui entrent ne connaissent pas encore la rumeur. Ce phénomène allant à l’encontre de la propagation de la rumeur, il permet d’obtenir certaines situations où la rumeur disparaît, ou certaines situations d’équilibre dans laquelle la rumeur ne parvient pas à atteindre 100% de la population.</p>
 
 <h3>
